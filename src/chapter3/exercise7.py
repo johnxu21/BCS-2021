@@ -1,7 +1,7 @@
 try:
     g = input('enter job location')
     b = int(input('enter pay'))
-    if g.upper() == 'MBARARA' and b <= 4000000:
+    if g.upper() == 'MBARARA' and b <= 4000000:  # (. upper) converts all the locations into uppercase
         print('No Thanks, I can find something better')
     elif g.upper() == 'MBARARA' and b > 4000000:
         print('I can work with this')
@@ -11,11 +11,9 @@ try:
         print('No Way!')
     elif g.upper() == 'SPACE' and b >= 0:
         print('Without doubt, I will work')
-    elif b >= 6000000:  # g==other districts and y>=6000000
+    elif b >= 6000000:  # g==other districts and b>=6000000
         print('I will surely work')
     else:
         print('No thanks, I can find something better')
 except:
-   print('invalid entry')
-
-
+    print('invalid entry')

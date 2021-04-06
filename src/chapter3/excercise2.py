@@ -1,15 +1,13 @@
 try:
-    hours = int(input('enter the hours worked'))
-    rate = float(input('enter the payment rate'))
-    if hours <= 40:
-        payment = rate * 40
-        print(payment)
-    if hours > 40:
-        payment = rate * hours
-        extra = 1.5 * (hours - 40) * 10
-        pay = payment + extra
-        print(pay)
+    x = float(input("enters hours"))
+    y = float(input("enters rate"))
+    z = (x * y)  # this is the pay for hours of work below or equal to 40
+    q = y * 40
+    m = (1.5 * (x - 40) * y)  # m is the extra hours worked beyond the 40 hours .
+    r = (q + m)  # this is the pay for hours of work above 40
+    if x <= 40:
+        print(z)
+    elif x > 40:
+        print(r)
 except:
-    print('error, please enter numeric input')
-
-
+    print("ERROR, PLEASE ENTER NUMERIC INPUT")
