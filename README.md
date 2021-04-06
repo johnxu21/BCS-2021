@@ -6,3 +6,4 @@ This repository is created to collect the assignment solutions for the subject C
 2. KATUSHABE MOREEN 2020/BCS/034/PS
 3. NANZIRI CHARLOTTE HELGA 2020/BCS/090/PS
 4. OMARE DANIEL 2020/BCS/057/PS
+5. BEILEL AUGUSTINE  2019/BCS/022/PS
