@@ -3,8 +3,9 @@ s = (input('enter score'))
 
 
 def compute_grade(score):
+    # this makes sure that the user enters only float values otherwise an error message pops up
     try:
-        score = float(s)  # this makes sure that the user enters only float values otherwise an error message pops up
+        score = float(s)
         if 0 <= score < 0.6:
             print(score, 'F')
         elif 0.6 <= score < 0.7:
@@ -18,7 +19,7 @@ def compute_grade(score):
         else:
             print('error, out of range')
         return "grade"
-    except:
+    except ValueError:
         return "INVALID ENTRY"
 
 
