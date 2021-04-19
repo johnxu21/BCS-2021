@@ -1,20 +1,21 @@
 
-
-score = float(input('Enter your score: '))
-def computegrade(score):
-    if score >= 0.0 and score <= 1.0:
-        if score >= 0.9:
-            print("A")
-        elif score>= 0.8:
-            print("B")    
-        elif score >=0.7:
-            print("C")
-        elif score >= 0.6:
-            print("D")
-        elif score < 0.6:
-            print("F")
-        else:
-            print("Bad score")
+def compute_grade(score):
+    if 0.9 <= score <= 1.0:
+        return 'A'
+    elif 0.8 <= score <= 0.89:
+        return 'B'
+    elif 0.7 <= score <= 0.79:
+        return  C
+    elif 0.6 <= score <= 0.69:
+        return 'D'
+    elif score == 0 and score < 0.59:
+        return  F
     else:
-        print('Bad score')
-computegrade(score)        
+        return 'Bad score.'
+
+
+try:
+    marks = float(input("Enter your score:  "))
+    print("Your score:", compute_grade(marks))
+except:
+    print("Enter a number: ")

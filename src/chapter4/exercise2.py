@@ -1,11 +1,17 @@
 
-#user must input C, r, n and t
-c = float(input('Enter initial amount of investment c:'))
-r = float(input('Enter yearly rate of interest r:'))
-n = float(input('Enter number of time interest is compound annually:'))
-t = float(input('Enter number of years:'))
 
-def investment(c, r, n, t):
-    final = c * (((1 + (r/n))**(n * t)))
-    print(final)
-investment(c, r, n, t)
+def compute_investment(c, r, n, t):
+    p = c*(1 + (r/n))**(t*n)
+    return p
+
+
+try:
+    c = int(input("Enter initial amount:"))
+    r = float(input("Enter the yearly rate: "))
+    n = int(input("Enter the number of times interest is compounded: "))
+    t = int(input("Enter the number of years until maturation:  "))
+
+    compound_interest = compute_investment(c, r, n, t)
+    print("The compound interest is", round(compound_interest, 2))
+except:
+    print("Please enter a numeric value:\n")

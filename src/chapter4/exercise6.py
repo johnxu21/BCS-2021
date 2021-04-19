@@ -1,12 +1,17 @@
-hours = float(input("Enter the hours: "))
-rate = float(input("Enter the rate: "))
-def computepay(hours, rate):
+
+
+def compute_pay(hours, rate):
     if hours > 40:
-      regular_pay = (hours * rate)
-      extra_pay = ((hours-40)*0.5*rate)
-      overTime_pay = regular_pay + extra_pay
-      print(overTime_pay)
+        pay = (hours-40)*rate*0.5 + (hours*rate)  
+        return pay
     else:
-      normal_pay = hours * rate
-      prnt(normal_pay)
-computepay(hours, rate)
+        pay = hours*rate 
+        return pay
+
+
+try:
+    hours_worked = float(input("Enter hours : "))
+    hourly_rate = float(input("Enter  rate: "))
+    print("Pay is: ", compute_pay(hours_worked, hourly_rate))
+except:
+    print("Please enter a number:  ")
