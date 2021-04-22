@@ -1,5 +1,6 @@
 count = 0
 total = 0
+
 while True:
     line = input("Enter number here: ")
     try:
