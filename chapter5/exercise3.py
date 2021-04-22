@@ -1,0 +1,1 @@
+print('>>>================RESTART================\n>>>\nWelcome to the vending machine change maker program\nchange maker initialized')
