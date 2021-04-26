@@ -1,4 +1,4 @@
-cctount = 0
+count = 0
 total = 0
 numbers = list()
 while True:
