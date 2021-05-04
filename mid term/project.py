@@ -10,3 +10,18 @@ def meter_reading(a, b):
         gallons = ((1000000000 - a) + b) / 10
     print(f'Gallons of water used:{gallons}')
     return gallons
+
+
+# prompting the user for inputs
+while True:
+    code = input("Enter customer code:\n")
+    if code == "R" or code == "r":
+        beginning = int(input('Enter beginning meter reading:\n'))
+        ending = int(input('Enter ending meter reading:\n'))
+        print(f'Customer code:{code}')
+        print(f'Beginning meter number:{beginning:9d}')
+        print(f'Ending meter reading:{ending:9d}')
+        gallons = meter_reading(beginning, ending)
+        pay = 5.00 + (gallons * 0.0005)
+        print(f'Amount billed: ${pay}')
+#  elif code == "C" or code == "c":
