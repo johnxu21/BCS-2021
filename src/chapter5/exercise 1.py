@@ -12,7 +12,6 @@ while True:
     except:
         if line =="done":
             break
-        else:
             print("Invalid input")
 
 print ("Total=", total, "Count=",  count ,"Average =", average)

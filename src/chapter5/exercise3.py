@@ -97,7 +97,7 @@ while total_cents > 0:
                 print("Illegal deposit: ", deposit_str)
                 deposit_str = input("\nIndicate your deposit: ")
 
-    else:
+    # else:
         print("Illegal price: Must be a non-negative multiple of 5 cents.")
 
     print("\nStock contains:\n    ", nickels, " nickels\n    ", dimes, " dimes\n    ", \
