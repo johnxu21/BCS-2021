@@ -21,7 +21,6 @@ while True:
         end_meter_reading=int(input('Enter the endining meter reading: '))
     except:
         print('Invalid input')
-
         
 
     gallons = gallon(beg_meter_reading, end_meter_reading)
@@ -32,5 +31,32 @@ while True:
                 output()
                 print(f'Gallons of water used:{gallons}')
                 print(f'Amount billed: ${amount_billed}')
-           
+            elif customer_code== 'c':
+                if gallons<=4000000:
+                    output()
+                    print(f'Gallons of water used:{gallons}')
+                    print(f'Amount billed:${1000.0}')
+                elif gallons>40000000:
+                    output()
+                    amount_billed=1000+(gallons-4000000)*0.00025
+                    print(f'Gallons of water used:{gallons}')
+                    print(f'Amount billed ${amount_billed}')
+            elif customer_code=='i': 
+                if gallons<=4000000:
+                    output()
+                    print(f'Gallons of water used:{gallons}')
+                    print(f'Amount billed ${1000.00}')
+                elif gallons>40000000:
+                    output()
+                    print(f'Gallons of water used:{gallons}')
+                    print(f'Amount billed ${2000.00}')
+                elif gallons>10000000:
+                    output()
+                    amount_billed=(2000.00+(0.00025)*gallons)
+                    print(f'Amount billed: ${amount_billed}')
+            else:
+                print('Ivalid input')
+    else:
+        print('Invalid input')
+
 
