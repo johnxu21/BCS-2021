@@ -9,14 +9,14 @@ except FileNotFoundError:
 out_put_file = input('enter output file >>>')
 year = (input('enter the year>>>'))
 converted_year = year
-if len(year) <=4:
+if len(year) <= 4:
     out_put_file = open(out_put_file, 'w')
 if len(year) >= 5:
     print('Please enter correct year')  # this pops up when  the length of the year is not 4
 for line in file_input:
     if converted_year == line[88:88 + len(year)]:
         out_put_file.write(line)
-    elif year == ("", "all", "ALL"):
+    elif year == "" or "all" or "ALL":
         out_put_file.write(line)
 
 file_input.close()
