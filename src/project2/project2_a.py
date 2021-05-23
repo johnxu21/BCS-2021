@@ -1,23 +1,22 @@
-# The program in “project2_a.py” will copy selected lines from “measles.txt” into a
-# file selected by the user.
+# A program in “project2_a.py” will copy selected lines from “measles.txt” into a
+# file selected by the user
 try:
-    file_input = open('measles.txt', 'r')
+    file = open('measles.txt', 'r')
+    output_file = (input('Output file name>>')).lower()
+    year = input('Enter year >>')
+    if '.txt' in output_file:
+        pass
+    else:
+        print('Error,output file should have [.txt] extension,re-run!!')  # output file should have an extension
+        exit()
+    file_saved = open(output_file, 'w')
+    for line in file:
+        if (year == " ") or (year.lower() == "all"):
+            file_saved.write(line)  # This is to add data to the new file created.
+        elif line[88:].startswith(year):  # #year begins at index 88
+            file_saved.write(line)
 except FileNotFoundError:
-    print('File cannot be opened:', ' measles.txt')
-    quit()
+    print("COULD NOT OPEN FILE")
 
-out_put_file = input('enter output file >>>')
-year = (input('enter the year>>>'))
-converted_year = year
-if len(year) <= 4:
-    out_put_file = open(out_put_file, 'w')
-if len(year) >= 5:
-    print('Please enter correct year')  # this pops up when  the length of the year is not 4
-for line in file_input:
-    if converted_year == line[88:88 + len(year)]:
-        out_put_file.write(line)
-    elif year == "" or "all" or "ALL":
-        out_put_file.write(line)
-
-file_input.close()
-out_put_file.close()
+file.close()
+output_file.close()
